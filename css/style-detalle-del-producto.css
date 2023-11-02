@@ -1,0 +1,20 @@
+#barra {
+  background-color: #090909;
+}
+li h6 {
+  margin-bottom: 0;
+}
+
+.card-title {
+  margin-bottom: 1em;
+}
+.card-text li {
+  margin-bottom: 0.5em;
+}
+.comentarios p {
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+footer {
+  margin-top: 1em;
+}

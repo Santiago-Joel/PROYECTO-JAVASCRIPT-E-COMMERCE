@@ -1,0 +1,29 @@
+.footer {
+    background-color: #090909;
+    color: rgb(246, 249, 251);
+    padding: 20px;
+  }
+  .footer__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer__column {
+    flex: 1;
+    margin: 10px;
+  }
+  .footer_social{
+    display: flex;
+    flex-direction: column;
+  }
+  /* Estilos para adaptar a dispositivos pequeños */
+  @media screen and (max-width: 768px) {
+    .footer__info {
+        justify-content: center;
+    }
+    
+    .footer__column {
+        flex-basis: calc(50%-20px);
+    }
+  }
