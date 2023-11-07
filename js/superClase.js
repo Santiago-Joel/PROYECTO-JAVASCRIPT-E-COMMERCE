@@ -53,4 +53,4 @@ class Crud {
 let arrayProductos =
   JSON.parse(localStorage.getItem(this.variableRandom)) || [];
 let usuarios = new Crud("Usuarios");
-let misProductos = new Crud("Productos");
+let misProductos = new Crud("misProductos");
