@@ -13,7 +13,7 @@ function visualizarProductos() {
                   <h5 class="card-title">
                     ${producto.nombre}
                   </h5>
-                  <a href=".detalle.html?id=${producto.id}" class="btn btn-primary">Ver detalles</a>
+                  <a href="./detalle.html?id=${producto.id}" class="btn btn-primary">Ver detalles</a>
                 </div>
               </div>
             </div>
