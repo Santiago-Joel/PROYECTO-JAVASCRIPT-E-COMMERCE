@@ -1,0 +1,113 @@
+CATEGORIA CELULARES
+
+Nombre: CELULAR SAMSUNG Z FLIP 4 SM-F721BZAJARO GRAFITO
+
+src: ./img/categoria-celulares/produc1Celulares.jpg
+
+Precio: 474.999
+
+Descripción: 
+ Celular. Pantalla de 6.6", 2640 x 1080 (FHD+), Dynamic AMOLED 2X, 120Hz.
+ Procesador Snapdragon 8+ gen 1 Qualcomm SM8475, Octa core 3.18GHz,2.7GHz,2GHz.
+ Camara principal 12 + 12 mp, F1.8 , F2.2, Digital zoom 10x / Camara frontal 10 mp, F2.4. Capacidad 128 Gb / RAM 8 Gb. USB 2.0 type C. 
+ GPS,Glonass,Beidou,Galileo,QZSS. Wi Fi 802.11 a/b/g/n/ac/ax 2.4G+5GHz, HE160, MIMO, 1024-QAM. 
+ Bluetooth 5.2. NFC. Accelerometro, Barometro, Fingerprint,Gyro Sensor, Geomagnetic Sensor, Hall Sensor, sensor de luz y Sensor de proximidad.
+ Bateria de 3700 mAh. No incluye cargador.
+
+
+
+Nombre: CELULAR SAMSUNG S22 / SM-S901E NEGRO
+
+src: ./img/categoria-celulares/produc2Celulares.jpg
+
+Precio: 437.499
+
+Descripción:
+El Samsung Galaxy S22 es el smartphone que le da nombre a la serie. 
+El Galaxy S22 llega con una pantalla Dynamic AMOLED 2X de 6.1 pulgadas a resolución FHD+ y tasa de refresco variable de 120Hz. 
+Con opciones de procesador de acuerdo con la región, el Galaxy S22 llega con un Snapdragon 8 Gen 1 o bien con un Exynos 2200, acompañado de 8GB de RAM con hasta 256GB de almacenamiento interno. 
+El arreglo de cámaras trasero cuenta con una cámara principal de 50MP con OIS, una cámara ultrawide de 12MP y una telefoto de 10MP con OIS y zoom 3x, mientras que la cámara frontal es de 10MP. 
+Una batería de 3700 mAh de carga rápida alimenta al Galaxy S22, que completa sus características con parlantes stereo, lector de huellas bajo la pantalla, certificación IP68 y corre One UI 4.1 basado en Android 12.
+
+
+
+Nombre: CELULAR MOTOROLA MOTO G72 / XT2255-3 BLANCO
+
+src: ./img/categoria-celulares/produc3Celulares.jpg
+
+Precio: 168.749
+
+Descripción:
+El Motorola Moto G72 es el sucesor del Moto G71 que llega esta vez sin conectividad 5G. 
+El Moto G72 cuenta con una pantalla OLED de 6.55 pulgadas a resolución FHD+ y tasa de refresco de 120Hz y está potenciado por un procesador Helio G99 acompañado de 6GB de RAM y 128GB de almacenamiento interno. 
+La cámara trasera del Moto G72 es triple, con un sensor principal de 108MP y secundado por una cámara ultrawide de 8MP y una macro de 2MP, mientras que la cámara selfie es de 16MP. 
+Alimentado por una batería de 5000 mAh con soporte para carga rápida, el Moto G72 completa sus características con parlantes stereo, lector de huellas bajo pantalla, resistencia a salpicaduras y corre Android 12.
+
+
+
+Nombre: CELULAR SAMSUNG A04 SM-A045M NEGRO
+
+src: ./img/categoria-celulares/produc4Celulares.jpg
+
+Precio: 99.999
+
+Descripción:
+El Samsung Galaxy A04 es el sucesor del Galaxy A03 y llega con una pantalla HD+ de 6.5 pulgadas. 
+Por dentro, encontramos un procesador Unisoc de ocho núcleos con hasta 8GB de RAM y hasta 128GB de almacenamiento interno y una batería de 5000 mAh. 
+El Galaxy A04 tiene una cámara dual con lente principal de 50MP y su cámara selfie es de 5MP, corriendo Android 12 con One UI Core 4.1.
+
+
+
+
+
+
+
+CATEGORIA NOTEBOOKS
+
+Nombre: NOTEBOOK LENOVO IDEAPAD 1 14IGL7 82V60027AR INTEL CELERON
+
+src: ./img/categoria-notebook/produc1Notebook.jpg
+
+Precio: 499.999
+
+Descripción:
+La laptop IdeaPad 1i 7ma Gen (14”, Intel) es exactamente lo que se necesita en un portátil de uso diario. 
+Mira programas en una pantalla hasta FHD de 14" con un marco muy delgado.
+Escucha un sonido rico y claro gracias a los dos altavoces Dolby Audio™. 
+Y con una batería de larga duración, puedes trabajar desde cualquier lugar, mientras disfrutas de videollamadas nítidas con una cámara web HD con obturador de privacidad y Smart Noise Cancelling opcional.
+
+
+
+Nombre: NOTEBOOK LENOVO IDEAPAD GAMING 3 15ACH6 82K201Y1AR AMD R7
+
+src: ./img/categoria-notebook/produc2Notebook.jpg
+
+Precio: 799.999
+
+Descripción:
+Notebook de 15.6\" FHD (1920x1080) IPS 250nits Anti-glare, 45% NTSC, 60Hz. Procesador AMD Ryzen 7 5800H (8C / 16T, 3.2 / 4.4GHz, 4MB L2 / 16MB L3). 
+Almacenamiento de 512GB SSD M.2 2280 PCIe 3.0x4 NVMe. Memoria RAM de 2x 8GB SO-DIMM DDR4-3200. Placa de video.
+
+
+
+Nombre: NOTEBOOK ASUS VIVOBOOK GO 15 E1504FA-NJ424W - 90NB0ZR2-M01310 AMD R3
+
+src: ./img/categoria-notebook/produc3Notebook.jpg
+
+Precio: 489.999
+
+Descripción:
+Notebook. Pantalla de 15.6\" FHD (1920 x 1080). Formato de pantalla 16:9. Tasa de refresco de 60Hz. Brillo 250 nits. 
+Procesador AMD Ryzen 3-7320U (2.4 hasta 4.1 GHz). 4 core, 8 Threads, 4 Mb cache. Capacidad 512GB M.2 NVMe PCIe 3.0 SSD. RAM 8GB LPDDR5 on
+
+
+
+Nombre:NOTEBOOK LENOVO 81VU00JUAR INTEL CELERON
+
+src: ./img/categoria-notebook/produc4Notebook.jpg
+
+Precio: 299.999
+
+Descripción:
+Diseñado con procesadores de hasta Intel® Pentium® y 4 GB de RAM, el IdeaPad 1 (14) Intel te ofrece un rendimiento de confianza mientras realizas múltiples tareas sin esfuerzo. Comunícate con tus amigos y familiares. 
+Disfruta del entretenimiento. Haz tu trabajo. Consigue el rendimiento de confianza esperado de los ordenadores equipados con Intel®.

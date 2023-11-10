@@ -7,16 +7,19 @@ section {
     border-collapse: collapse;
     min-height: 400px;
   }
+  #editar{
+    margin: 20px;
+  }
   
   th, td {
     padding: 8px;
-    text-align: left;
+    text-align: center;
   }
   
 
   @media (max-width: 768px) {
     th, td {
-        min-width: 100px;
+      min-width: 100px;
       padding: 4px;
       font-size: 10px;
     }
@@ -35,7 +38,7 @@ section {
     }
   }
   .imgProducto {
-    max-width: 30%; 
+    max-width:100px; 
     height: auto; 
     display: block; 
     margin: 0 auto; 

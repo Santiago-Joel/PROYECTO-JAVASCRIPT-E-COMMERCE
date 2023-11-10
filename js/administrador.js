@@ -25,6 +25,9 @@ function agregarProductos() {
         <input type="text" name="src" id="src" placeholder="src">
     </div>
     <div class="form-group">
+        <input type="number" name="precio" id="precio" placeholder="precio">
+    </div>
+    <div class="form-group">
         <input type="text" name="descripcion" id="descripcion" placeholder="descripcion">
     </div>
     <div class="form-group">
@@ -44,9 +47,9 @@ function agregarProductos() {
 }
 function add() {
     let form = document.querySelector("#agregar");
-    let [nombre,src,descripcion,categoria]=form;
+    let [nombre,src,precio,descripcion,categoria]=form;
 
-    misProductos.crear({nombre:nombre.value,src:src.value,descripcion:descripcion.value,categoria:categoria.value})
+    misProductos.crear({nombre:nombre.value,src:src.value,precio:precio.value,descripcion:descripcion.value,categoria:categoria.value})
     
 }
 const modificarProductos=(obj)=>{
@@ -58,6 +61,9 @@ const modificarProductos=(obj)=>{
     </div>
     <div class="input">
         <input type="text" name="src" id="src" value="${obj.src}">
+    </div>
+    <div class="input">
+        <input type="text" name="precio" id="precio" value="${obj.precio}">
     </div>
     <div class="input">
     <input type="text" name="descripcion" id="descripcion" value="${obj.descripcion}">
@@ -82,11 +88,10 @@ document.querySelector("#btnVolver").addEventListener("click",function () {
 document.querySelector("#editar").addEventListener('click',()=>{
     let nombre=document.querySelector("#nombre").value;
     let src=document.querySelector("#src").value;
+    let precio=document.querySelector("#precio").value;
     let descripcion=document.querySelector("#descripcion").value
     let categoria=document.querySelector("#categoria").value
-    console.log(nombre,src,descripcion,categoria);
-    console.log(obj.id);
-    misProductos.actualizar(obj.id,{id:obj.id,nombre,src,descripcion,categoria});
+    misProductos.actualizar(obj.id,{id:obj.id,nombre,src,precio,descripcion,categoria});
     
 })
 
@@ -95,11 +100,11 @@ document.querySelector("#editar").addEventListener('click',()=>{
 function mostrarProductos(obj) {
     let productos = ``;
     obj.map((producto)=>{
-        productos+= `<tr >
+        productos+= `<tr class="listaProductos">
         <td><img class="imgProducto" src="${producto.src}"></td>
-        <td><h3 class="text-black mx-3">${producto.nombre}</h3></td>
-        <td><h3 class="text-black mx-3">${producto.descripcion}</h3></td>
-        <td><h3 class="text-black mx-3">${producto.categoria}</h3></td>
+        <td><h4 class="text-black mx-3">${producto.nombre}</h3></td>
+        <td><h4 class="text-black mx-3">${producto.precio}</h3></td>
+        <td><h4 class="text-black mx-3">${producto.categoria}</h3></td>
         <td><button class="btn btn-primary"><a class="text-white"  href="./detalle.html?id=${producto.id}">Ver más</a></button></td>
         <td><button class="btn btn-success" onclick="actualizar(${producto.id})">Editar</button></td>
         <td><button class="btn btn-danger" onclick="eliminarProductos(${producto.id})">Borrar</button></td>
@@ -107,22 +112,23 @@ function mostrarProductos(obj) {
     })
     return `
     <section>
-    <button id="add" class="btn btn-success m-4">Agregar Producto</button>
-    <table class="m-4">
-    <thead>
-        <!--<tr>
-            <th>Nombre</th>
-            <th>Imagen</th>
-            <th>Descripción</th>
-            <th>Categoría</th>
-            <th>Editar</th>
-            <th>Borrar</th>
-        </tr>-->
-    </thead>
-    <tbody>
-        ${productos}
-    </tbody>
-   </table>
+        <button id="add" class="btn btn-success m-4">Agregar Producto</button>
+        <table class="m-4">
+            <thead>
+              <tr>
+                 <th>Imagen</th>
+                 <th>Nombre</th>
+                 <th>Precio</th>
+                 <th>Categoría</th>
+                  <th>Detalle</th>
+                  <th>Editar</th>
+                  <th>Borrar</th>
+               </tr>
+            </thead>
+            <tbody>
+            ${productos}
+            </tbody>
+        </table>
    </section>
     `
 }

@@ -8,7 +8,7 @@ function visualizarProductos() {
             <div class="p-3">
               <div id="card-2" class="card">
                 <img src="${producto.src}" class="card-img-top"
-                  alt="${prodcuto.nombre}" />
+                  alt="${producto.nombre}" />
                 <div class="card-body d-flex flex-column justify-content-between h-100">
                   <h5 class="card-title">
                     ${producto.nombre}
