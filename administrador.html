@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style-index.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/administrador.css">
+    <title>Rolling Tech</title>
+  </head>
+<body>
+  <header>
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Rolling Tech</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="index.html"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Inicio
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Categorias
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="detalle-de-categoria-celulares.html"
+                      >Celulares</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="detalle-de-categoria-notebooks.html"
+                      >Notebooks</a
+                    >
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li><a class="dropdown-item" href="error404.html">TV</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="nosotros.html"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Acerca de Nosotros
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="contacto.html"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Contacto
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="detalle_carrito.html"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Carrito
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="./administrador.html"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Administrador
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="#"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  >Login
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Buscar"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Buscar
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="col-md-3 col-md-4 col-sm-6">
+                <img src="img/icono-usuario/icono_usuario.jpg" width="70px"
+                height="70px" class="rounded-circle img-fluid">
+              </div>
+              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                  />
+                </div>
+                <label for="recuperarpassword" class="form-label"
+                  ><a href="error404.html">Recuperar Contraseña</a>
+                </label
+              </form>
+            </div>
+            <div class="modal-footer">
+              <div class="d-grid gap-4 col-md-6 mx-auto">
+                <a href="error404.html" class="btn btn-primary">login</a>
+                <a href="registro.html" class="btn btn-secondary">Registro</a>
+                <a href="error404.html" class="btn"><img
+                  src="img/icono-usuario/btn_google_signin_dark_normal_web.png" alt="Login con Google"></a>
+                <a href="error404.html" class="btn"><img
+                    src="img/icono-usuario/boton_facebook.png" alt="Login con Facebook"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header> 
+    <main>
+        <section class="cajapadre">
+            <h3 class="textobanner bg-white text-dark w-25">Administrador</h3>
+        </section>
+        <div id="principal" class="contenedor"></div> 
+    </main>
+    <footer class="footer">
+      <div class="footer__info">
+        <div class="footer_column footer_contact">
+          <h3>Contacto</h3>
+          <p>Teléfono: (123) 456-7890</p>
+          <p>Correo electrónico: Rollingtech@gmail.com</p>
+        </div>
+        <div class="footer_column footer_links">
+          <h3>Enlaces</h3>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="detalle-de-categoria-celulares.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="error404.html">Preguntas frecuentes</a></li>
+            <li><a href="error404.html">Política de privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer_social">
+          <h3>Redes sociales</h3>
+          <a href="error404.html"
+            ><img
+              src="img/icons.redes/facebook-logo-0.png"
+              alt="Facebook"
+            />Facebook</a
+          >
+          <a href="error404.html"
+            ><img src="img/icons.redes/images.jpg" alt="Twitter" />Twitter</a
+          >
+          <a href="error404.html"
+            ><img
+              src="img/icons.redes/Instagram_logo_2022.svg.png"
+              alt="Instagram"
+            />Instagram</a
+          >
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <p>&copy; 2023 Rolling Tech. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script src="./js/pagInicio.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+      <script src="/js/superClase.js"></script>
+   <script src="/js/administrador.js"></script>
+</body>
+</html> 
