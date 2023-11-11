@@ -34,7 +34,6 @@ formBusqueda.addEventListener("submit", function (event) {
   const terminoDeBusqueda = inputBusqueda.value.toLowerCase();
   console.log("Esto se envía al filtro:", terminoDeBusqueda);
 
-  // Redirigir a la página de resultados con el término de búsqueda
   window.location.href = `resultBusqueda.html?q=${terminoDeBusqueda}`;
 });
 

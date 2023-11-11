@@ -71,6 +71,16 @@ h2{
     height: 11rem;
 }
 
-
+img.card-img-top{
+    max-width: 60%;
+    margin-top: 1em;
+}
+div#card-2.card{
+    display: flex;
+    align-items: center;
+}
+div.card{
+    align-items: center;
+}
 
 
