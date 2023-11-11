@@ -2,6 +2,7 @@ let contenedor = document.querySelector("#productosDestacados");
 
 function visualizarProductos() {
   let produc = misProductos.obtener();
+  
   produc.map((producto) => {
     contenedor.innerHTML += `
         <div class="col productos">
@@ -22,3 +23,17 @@ function visualizarProductos() {
   })
 }
 visualizarProductos();
+
+const todosLosProductos = misProductos.obtener();
+const formBusqueda = document.querySelector("#searchForm");
+const inputBusqueda = document.querySelector("#searchInput");
+
+formBusqueda.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const terminoDeBusqueda = inputBusqueda.value.toLowerCase();
+  console.log("Esto se envía al filtro:", terminoDeBusqueda);
+
+  window.location.href = `resultBusqueda.html?q=${terminoDeBusqueda}`;
+});
+
