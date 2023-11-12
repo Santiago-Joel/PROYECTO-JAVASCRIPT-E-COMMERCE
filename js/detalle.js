@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         <h5 class="card-title">${productoSeleccionado.nombre}</h5>
                         <p class="card-text">${productoSeleccionado.descripcion}</p>
                         <p class="card-text"><h4 class="fs-3 fst-italic text-info">$${productoSeleccionado.precio}</h4></p>
+                        <p><h5>Stock:20</h5></p>
+                        <button><span>COMPRAR</span></button>
                     </div>
                 </div>
             `;
