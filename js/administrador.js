@@ -9,7 +9,7 @@ function actualizar(id) {
         return p;
     }
    });
-   modificarProductos(obj)
+   modificarProductos(obj);
 }
 
 
@@ -53,7 +53,13 @@ function add() {
     let [nombre,src,precio,stock,descripcion,categoria]=form;
 
     misProductos.crear({nombre:nombre.value,src:src.value,precio:precio.value,stock:stock.value,descripcion:descripcion.value,categoria:categoria.value})
-    
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Exito al agregar",
+        showConfirmButton: false,
+        timer: 1800
+      });
 }
 const modificarProductos=(obj)=>{
 
@@ -99,7 +105,13 @@ document.querySelector("#editar").addEventListener('click',()=>{
     let descripcion=document.querySelector("#descripcion").value
     let categoria=document.querySelector("#categoria").value
     misProductos.actualizar(obj.id,{id:obj.id,nombre,src,precio,stock:stock,descripcion,categoria});
-    
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Exito al modificar",
+        showConfirmButton: false,
+        timer: 1800
+      });
 })
 
 }
