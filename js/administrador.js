@@ -156,6 +156,7 @@ function mostrarProductos(obj) {
 
 function eliminarProductos(id) {
     misProductos.eliminar(id);
+    location.reload();
 }
 document.querySelector("#add").addEventListener('click',function () {
     principal.innerHTML=agregarProductos()
