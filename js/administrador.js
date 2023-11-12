@@ -28,6 +28,9 @@ function agregarProductos() {
         <input type="number" name="precio" id="precio" placeholder="precio">
     </div>
     <div class="form-group">
+        <input type="number" name="stock" id="stock" placeholder="stock">
+    </div>
+    <div class="form-group">
         <input type="text" name="descripcion" id="descripcion" placeholder="descripcion">
     </div>
     <div class="form-group">
@@ -47,9 +50,9 @@ function agregarProductos() {
 }
 function add() {
     let form = document.querySelector("#agregar");
-    let [nombre,src,precio,descripcion,categoria]=form;
+    let [nombre,src,precio,stock,descripcion,categoria]=form;
 
-    misProductos.crear({nombre:nombre.value,src:src.value,precio:precio.value,descripcion:descripcion.value,categoria:categoria.value})
+    misProductos.crear({nombre:nombre.value,src:src.value,precio:precio.value,stock:stock.value,descripcion:descripcion.value,categoria:categoria.value})
     
 }
 const modificarProductos=(obj)=>{
@@ -64,6 +67,9 @@ const modificarProductos=(obj)=>{
     </div>
     <div class="input">
         <input type="text" name="precio" id="precio" value="${obj.precio}">
+    </div>
+    <div class="input">
+        <input type="number" name="stock" id="stock" value="${obj.stock}">
     </div>
     <div class="input">
     <input type="text" name="descripcion" id="descripcion" value="${obj.descripcion}">
@@ -89,9 +95,10 @@ document.querySelector("#editar").addEventListener('click',()=>{
     let nombre=document.querySelector("#nombre").value;
     let src=document.querySelector("#src").value;
     let precio=document.querySelector("#precio").value;
+    let stock=document.querySelector("#stock").value;
     let descripcion=document.querySelector("#descripcion").value
     let categoria=document.querySelector("#categoria").value
-    misProductos.actualizar(obj.id,{id:obj.id,nombre,src,precio,descripcion,categoria});
+    misProductos.actualizar(obj.id,{id:obj.id,nombre,src,precio,stock:stock,descripcion,categoria});
     
 })
 
@@ -104,6 +111,7 @@ function mostrarProductos(obj) {
         <td><img class="imgProducto" src="${producto.src}"></td>
         <td><h4 class="text-black mx-3">${producto.nombre}</h3></td>
         <td><h4 class="text-black mx-3">${producto.precio}</h3></td>
+        <td><h4 class="text-black mx-3">${producto.stock}</h3></td>
         <td><h4 class="text-black mx-3">${producto.categoria}</h3></td>
         <td><button class="btn btn-primary"><a class="text-white"  href="./detalle.html?id=${producto.id}">Ver más</a></button></td>
         <td><button class="btn btn-success" onclick="actualizar(${producto.id})">Editar</button></td>
@@ -119,6 +127,7 @@ function mostrarProductos(obj) {
                  <th>Imagen</th>
                  <th>Nombre</th>
                  <th>Precio</th>
+                 <th>Stock</th>
                  <th>Categoría</th>
                   <th>Detalle</th>
                   <th>Editar</th>
