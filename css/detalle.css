@@ -1,0 +1,17 @@
+.card {
+    width: 500px; 
+  }
+  
+  .card-img-top {
+    width: 100%; 
+    height: auto; 
+    max-height: 350px; 
+  }
+
+  .container-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
