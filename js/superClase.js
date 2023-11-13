@@ -3,27 +3,29 @@ class Crud {
   constructor(variableRandom) {
     this.variableRandom = variableRandom;
     this.array = JSON.parse(localStorage.getItem(this.variableRandom)) || [];
-  }
-  //metodo para crear(create)
+    if (this.array.length > 0) {
+        Crud.id = Math.max(...this.array.map(obj => obj.id)) + 1;
+    }
+}
+
   crear(nuevoObjeto) {
     nuevoObjeto.id = this.myId();
     this.array = [...this.array, nuevoObjeto];
-    arrayProductos =
-      JSON.parse(localStorage.getItem(this.variableRandom)) || [];
     arrayProductos = this.array;
     localStorage.setItem(this.variableRandom, JSON.stringify(arrayProductos));
     console.log(arrayProductos);
-  }
+}
+
   myId() {
     return Crud.id++;
   }
 
-  //metodo para leer(read)
+ 
   obtener() {
     return this.array;
   }
 
-  //metodo para actualizar/modificar(update)
+ 
   actualizar(id, nuevoValor) {
     this.array.filter((obj, index) => {
       if (id == obj.id) {
@@ -36,7 +38,7 @@ class Crud {
     localStorage.setItem(this.variableRandom, JSON.stringify(arrayProductos));
   }
 
-  //metodo para eliminar(delete)
+  
   eliminar(id) {
     let nuevosDatos = this.array.filter((obj) => {
       if (id != obj.id) {
