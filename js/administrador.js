@@ -1,21 +1,21 @@
+let us = JSON.parse(sessionStorage.getItem("user"));
+console.log(us.admin);
+if (us.admin) {
+  let principal = document.querySelector("#principal");
+  principal.innerHTML = mostrarProductos(misProductos.obtener());
 
-let principal=document.querySelector("#principal");
-principal.innerHTML=mostrarProductos(misProductos.obtener());
-
-function actualizar(id) {
-   let productos = misProductos.obtener();
-   let [obj] = productos.filter(p=>{
-    if (p.id==id){
+  function actualizar(id) {
+    let productos = misProductos.obtener();
+    let [obj] = productos.filter((p) => {
+      if (p.id == id) {
         return p;
-    }
-   });
-   modificarProductos(obj);
-}
+      }
+    });
+    modificarProductos(obj);
+  }
 
-
-
-function agregarProductos() {
-    return`
+  function agregarProductos() {
+    return `
     <form id="agregar">
     <h3 class="text-white bg-primary text-center my-3">Agregar Productos</h3>
     <div class="form-group">
@@ -47,23 +47,29 @@ function agregarProductos() {
     </div>
 </form>
 `;
-}
-function add() {
+  }
+  function add() {
     let form = document.querySelector("#agregar");
-    let [nombre,src,precio,stock,descripcion,categoria]=form;
+    let [nombre, src, precio, stock, descripcion, categoria] = form;
 
-    misProductos.crear({nombre:nombre.value,src:src.value,precio:precio.value,stock:stock.value,descripcion:descripcion.value,categoria:categoria.value})
+    misProductos.crear({
+      nombre: nombre.value,
+      src: src.value,
+      precio: precio.value,
+      stock: stock.value,
+      descripcion: descripcion.value,
+      categoria: categoria.value,
+    });
     Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Exito al agregar",
-        showConfirmButton: false,
-        timer: 1800
-      });
-}
-const modificarProductos=(obj)=>{
-
-    principal.innerHTML=  `<form id="editar">
+      position: "center",
+      icon: "success",
+      title: "Exito al agregar",
+      showConfirmButton: false,
+      timer: 1800,
+    });
+  }
+  const modificarProductos = (obj) => {
+    principal.innerHTML = `<form id="editar">
     <h3 class="text-white bg-primary text-center my-3">Modificar Productos</h3>
     <div class="input">
         <input type="text" name="nombre" id="nombre" value="${obj.nombre}">
@@ -93,33 +99,39 @@ const modificarProductos=(obj)=>{
         <span></span>
     </div>
 </form>`;
-document.querySelector("#btnVolver").addEventListener("click",function () {
-    location.reload() 
-    
-})
-document.querySelector("#editar").addEventListener('click',()=>{
-    let nombre=document.querySelector("#nombre").value;
-    let src=document.querySelector("#src").value;
-    let precio=document.querySelector("#precio").value;
-    let stock=document.querySelector("#stock").value;
-    let descripcion=document.querySelector("#descripcion").value
-    let categoria=document.querySelector("#categoria").value
-    misProductos.actualizar(obj.id,{id:obj.id,nombre,src,precio,stock:stock,descripcion,categoria});
-    Swal.fire({
+    document.querySelector("#btnVolver").addEventListener("click", function () {
+      location.reload();
+    });
+    document.querySelector("#editar").addEventListener("click", () => {
+      let nombre = document.querySelector("#nombre").value;
+      let src = document.querySelector("#src").value;
+      let precio = document.querySelector("#precio").value;
+      let stock = document.querySelector("#stock").value;
+      let descripcion = document.querySelector("#descripcion").value;
+      let categoria = document.querySelector("#categoria").value;
+      misProductos.actualizar(obj.id, {
+        id: obj.id,
+        nombre,
+        src,
+        precio,
+        stock: stock,
+        descripcion,
+        categoria,
+      });
+      Swal.fire({
         position: "center",
         icon: "success",
         title: "Exito al modificar",
         showConfirmButton: false,
-        timer: 1800
+        timer: 1800,
       });
-})
+    });
+  };
 
-}
-
-function mostrarProductos(obj) {
+  function mostrarProductos(obj) {
     let productos = ``;
-    obj.map((producto)=>{
-        productos+= `<tr class="listaProductos">
+    obj.map((producto) => {
+      productos += `<tr class="listaProductos">
         <td><img class="imgProducto" src="${producto.src}"></td>
         <td><h4 class="text-black mx-3">${producto.nombre}</h3></td>
         <td><h4 class="text-black mx-3">${producto.precio}</h3></td>
@@ -129,7 +141,7 @@ function mostrarProductos(obj) {
         <td><button class="btn btn-success" onclick="actualizar(${producto.id})">Editar</button></td>
         <td><button class="btn btn-danger" onclick="eliminarProductos(${producto.id})">Borrar</button></td>
     </tr> `;
-    })
+    });
     return `
     <section>
         <button id="add" class="btn btn-success m-4">Agregar Producto</button>
@@ -151,16 +163,17 @@ function mostrarProductos(obj) {
             </tbody>
         </table>
    </section>
-    `
-}
+    `;
+  }
 
-function eliminarProductos(id) {
+  function eliminarProductos(id) {
     misProductos.eliminar(id);
     location.reload();
+  }
+  document.querySelector("#add").addEventListener("click", function () {
+    principal.innerHTML = agregarProductos();
+  });
+}else{
+    alert("Lo siento. No tienes permisos de administrador.")   
+    location.replace("./index.html");
 }
-document.querySelector("#add").addEventListener('click',function () {
-    principal.innerHTML=agregarProductos()
-})
-
-
-

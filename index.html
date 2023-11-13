@@ -153,36 +153,47 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form>
-              <div class="mb-3">
+            <form id="acceso" action="./administrador.html">
+              <div class="input mb-3">
                 <label for="exampleInputEmail1" class="form-label"
-                  >Email</label
+                  >Usuario</label
                 >
                 <input
                   type="email"
+                  name="usuario"
                   class="form-control"
-                  id="exampleInputEmail1"
+                  id="usuario"
                   aria-describedby="emailHelp"
+                  placeholder="nombre@ejemplo.com"
+                  required
                 />
               </div>
-              <div class="mb-3">
+              <div class="input mb-3">
                 <label for="exampleInputPassword1" class="form-label"
                   >Contraseña</label
                 >
                 <input
                   type="password"
+                  name="password"
                   class="form-control"
-                  id="exampleInputPassword1"
+                  id="password"
+                  maxlength="25"
+                  required
                 />
               </div>
-              <label for="recuperarpassword" class="form-label"
+              <div for="recuperarpassword" class="form-label"
                 ><a href="error404.html">Recuperar Contraseña</a>
-              </label
+              </div>
+              <div class="input d-grid gap-4 col-md-6 mx-auto">
+                <input class="btn btn-primary" type="submit" value="Acceder"></input>
+              </div>
+              <div class="input">
+                <span id="msg"></span>
+            </div>
             </form>
           </div>
           <div class="modal-footer">
             <div class="d-grid gap-4 col-md-6 mx-auto">
-              <a href="error404.html" class="btn btn-primary">Acceso</a>
               <a href="registro.html" class="btn btn-secondary">Registro</a>
               <a href="error404.html" class="btn"><img
                 src="img/icono-usuario/btn_google_signin_dark_normal_web.png" alt="Login con Google"></a>
@@ -326,6 +337,7 @@
     </div>
   </footer>
     <script src="./js/superClase.js"></script>
+    <script src="./js/acceso.js"></script>
     <script src="./js/pagInicio.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
