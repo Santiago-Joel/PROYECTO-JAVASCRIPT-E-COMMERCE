@@ -98,3 +98,6 @@ margin-top: 1em;
     padding: 0;
     padding: 5px;
 }
+#adminLink{
+    display: none;
+}

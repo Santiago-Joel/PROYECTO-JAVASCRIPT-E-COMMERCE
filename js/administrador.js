@@ -1,6 +1,15 @@
 let us = JSON.parse(sessionStorage.getItem("user"));
+let adminLink = document.querySelector("#adminLink");
 console.log(us.admin);
-if (us.admin) {
+console.log(us);
+let esAdmin = us && us.admin;
+let alertaYaMostrado = sessionStorage.getItem("alertaMostrado");
+if (esAdmin) {
+
+  if (adminLink) {
+    adminLink.style.display = "block";
+  }
+
   let principal = document.querySelector("#principal");
   principal.innerHTML = mostrarProductos(misProductos.obtener());
 
@@ -173,7 +182,15 @@ if (us.admin) {
   document.querySelector("#add").addEventListener("click", function () {
     principal.innerHTML = agregarProductos();
   });
+  
+}else if (us !== null && !alertaYaMostrado ) {
+  alert("Lo siento. No tienes permisos de administrador.");
+  location.replace("./index.html");
+  sessionStorage.setItem("alertaMostrado", "true");
 }else{
-    alert("Lo siento. No tienes permisos de administrador.")   
+  if (us.admin===false) {
+    alert("Lo siento. No tienes permisos de administrador.");
     location.replace("./index.html");
+  }
 }
+
